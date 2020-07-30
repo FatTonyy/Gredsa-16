@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter&display=swap");
+/*
+font-family: 'Great Vibes', cursive;
+font-family: 'Inter', sans-serif;
+
+*/
+
+$color-bg: #101d2c;
+$color-primary: #efb6b2;
+$color-secondary: #4e4e4e;
+$color-error: #ff4a4a;
+$color-white: #aaa;
+
+/* base styles & title */
+h2,
+h1 {
+	font-family: "Great Vibes", cursive;
+}
+
+html {
+	font-size: 62.5%;
+}
+body {
+	font-family: "Inter", sans-serif;
+	background: linear-gradient(rgba($color-bg, 0.93), rgba($color-bg, 0.93)),
+		url("./ug.jpg") no-repeat center center/cover;
+	background-attachment: fixed;
+}
+.App {
+	max-width: 960px;
+	margin: 0 auto;
+}
+.title h1 {
+	color: $color-primary;
+	font-size: 3.2rem;
+	letter-spacing: 2px;
+	font-weight: normal;
+}
+.title h2,
+.title p {
+	text-align: center;
+}
+.title h2 {
+	margin-top: 60px;
+	font-size: 5.6rem;
+	color: $color-white;
+	filter: brightness(70%);
+}
+
+/* upload form styles */
+
+/* progress bar styles */
+
+/* image grid styles */
+
+/* modal styles */
