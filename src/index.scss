@@ -6,15 +6,20 @@ font-family: 'Inter', sans-serif;
 */
 
 $color-bg: #101d2c;
-$color-primary: #efb6b2;
+$color-primary: #f81de6;
 $color-secondary: #4e4e4e;
 $color-error: #ff4a4a;
-$color-white: #aaa;
+$color-white: #fff;
+$color-black: #010101;
 
 /* base styles & title */
 h2,
 h1 {
 	font-family: "Great Vibes", cursive;
+}
+p {
+	font-size: 2.2rem;
+	color: $color-white;
 }
 
 html {
@@ -48,9 +53,92 @@ body {
 }
 
 /* upload form styles */
+form {
+	margin: 30px auto 10px;
+	text-align: center;
+}
+label input {
+	height: 0;
+	width: 0;
+	opacity: 0;
+}
+label {
+	display: block;
+	width: 30px;
+	height: 30px;
+	border: 1px solid $color-primary;
+	border-radius: 50%;
+	margin: 10px auto;
+	line-height: 30px;
+	color: var(--primary);
+	font-weight: bold;
+	font-size: 24px;
+}
+label:hover {
+	background: $color-primary;
+	color: white;
+}
+.output {
+	height: 60px;
+	font-size: 0.8rem;
+}
+.error {
+	color: $color-error;
+}
 
 /* progress bar styles */
+.progress-bar {
+	height: 0.5rem;
+	background: $color-primary;
+	margin-top: 20px;
+}
 
 /* image grid styles */
+.img-grid {
+	margin: 2rem auto;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	@media screen and (max-width: 31.25em) {
+		grid-template-columns: repeat(1, 1fr);
+		padding: 2rem;
+	}
+	@media screen and (max-width: 48em) {
+		padding: 1.5rem;
+	}
+	gap: 4rem;
+}
+.img-wrap {
+	overflow: hidden;
+	height: 0;
+	padding: 50% 0;
+	object-fit: fill;
+	/* padding controls height, will always be perfectly square regardless of width */
+	position: relative;
+	opacity: 0.8;
+}
+.img-wrap img {
+	min-width: 100%;
+	min-height: 100%;
+	max-width: 150%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
 
 /* modal styles */
+.backdrop {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
+}
+.backdrop img {
+	display: block;
+	max-width: 60%;
+	max-height: 80%;
+	margin: 60px auto;
+	box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.5);
+	border: 3px solid white;
+}
