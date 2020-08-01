@@ -9,17 +9,18 @@ $color-bg: #101d2c;
 $color-primary: #f81de6;
 $color-secondary: #4e4e4e;
 $color-error: #ff4a4a;
-$color-white: #fff;
+$color-white: #1d597b;
 $color-black: #010101;
 
 /* base styles & title */
 h2,
 h1 {
 	font-family: "Great Vibes", cursive;
+	font-weight: 600;
 }
 p {
-	font-size: 2.2rem;
-	color: $color-black;
+	font-size: 1.8rem;
+	color: #fff;
 }
 
 html {
