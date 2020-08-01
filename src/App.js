@@ -3,6 +3,7 @@ import Title from "./components/Title";
 import UploadForms from "./components/UploadForms";
 import ImageGrid from "./components/ImageGrid";
 import Modal from "./components/Modal";
+import { LazyLoadComponent } from "react-lazy-load-image-component";
 
 function App() {
 	const [selectedImg, setSelectedImg] = useState(null);
@@ -10,7 +11,9 @@ function App() {
 		<div className="App">
 			<Title />
 			<UploadForms />
-			<ImageGrid setSelectedImg={setSelectedImg} />
+			<LazyLoadComponent>
+				<ImageGrid setSelectedImg={setSelectedImg} />
+			</LazyLoadComponent>
 			{selectedImg && <Modal selectedImg={selectedImg} setSelectedImg={setSelectedImg} />}
 		</div>
 	);
